@@ -1,3 +1,46 @@
 @tailwind base;
+
+@layer base {
+    :root {
+        --primary: rgba(255,255,255,0.3);
+        --secondary: rgba(255,255,255,0.8);
+    }
+
+    /* Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--secondary) var(--primary);
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 8px; /* 스크롤바 너비를 12px에서 8px로 조정 */
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--primary);
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--secondary);
+        border-radius: 10px; /* 스크롤바 둥근 모서리 반경 조정 */
+        border: 2px solid var(--primary);
+    }
+
+    body {
+        background-color: #dce6d1;
+        height: 100svh;
+    }
+    #root {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @tailwind components;
 @tailwind utilities;
+

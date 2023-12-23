@@ -1,16 +1,10 @@
 import { CardWrapper } from "./components/CardWrapper.tsx";
+import { Header } from "./components/Header.tsx";
 
 function App() {
   return (
-    <div>
-      <header>
-        <ul>
-          <li>All</li>
-          <li>Advertising</li>
-          <li>Dev & Research</li>
-          <li>Goals</li>
-        </ul>
-      </header>
+    <div className="bg-neutral-900 rounded-[50px] h-[95%] w-[420px] px-5 py-12">
+      <Header />
       <CardWrapper />
     </div>
   );
